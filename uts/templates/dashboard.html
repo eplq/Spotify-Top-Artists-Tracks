@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tops</h1>
+    <h2>Artists</h2>
+    <ol>
+        {% for artist in top_artists["items"] %}
+            <li>{{ artist["name"] }}</li>
+        {% endfor %}
+    </ol>
+
+    <h2>Songs</h2>
+    <ol>
+        {% for song in top_songs["items"] %}
+            <li>{{ song["name"] }} - {{ song["artists"][0]["name"] }}
+            </li>
+        {% endfor %}
+    </ol>
+</body>
+</html>

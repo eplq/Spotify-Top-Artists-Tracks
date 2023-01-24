@@ -37,6 +37,7 @@ def login():
 
     return response
 
+
 @spotify_auth_router.get("/callback")
 def callback():
 
@@ -55,4 +56,4 @@ def callback():
     cursor.execute("UPDATE users SET access_token = ?, expires_in = ? WHERE cookie = ?", (access_token, int(time() + expires_in), session))
     commit()
 
-    return f"{access_token}\n{expires_in}"
+    return redirect("/dashboard")
