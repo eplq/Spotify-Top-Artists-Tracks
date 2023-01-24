@@ -9,7 +9,7 @@ It is a simple but functional app that shows you your top 20 tracks and artists 
 First clone the repository and enter the directory:
 
 ```sh
-git clone git@github.com:eplq/Spotify-Top-Artists-Tracks.git
+git clone https://github.com/eplq/Spotify-Top-Artists-Tracks.git
 cd Spotify-Top-Artists-Tracks
 ```
 
